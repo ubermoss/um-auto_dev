@@ -32,6 +32,12 @@ The iteration loop successfully:
 - Generates human review packages
 - Saves all session data
 
+**NEW:** Token tracking system with three layers:
+- Meta-meta: Framework development overhead tracking
+- Meta: Iteration execution with learning
+- Project: Target operations (cheap)
+- Proactive warnings before expensive operations
+
 **Test Output:**
 ```
 Iteration 1: Score 0.60 → Identified "Scene too dark"
@@ -232,9 +238,40 @@ TEST: System enhances itself when encountering new problems
 
 ## Token Usage Strategy
 
+### Three-Layer Token Tracking System ✅
+
+**Problem:** Hit token limit while building the meta-system itself (meta-meta layer)
+
+**Solution:** Track token costs across all three layers:
+
+1. **Meta-Meta Layer** (Framework Development)
+   - **What:** Building the system that tracks tokens (this conversation)
+   - **Tools:** `OperationCostEstimator` with rough estimates
+   - **Triggers:** Refactoring, creating new tools, architecture changes
+   - **Example:** "Refactor all token tracking code" = ~81,000 tokens
+   - **Warning levels:** 80% checkpoint, 90% critical
+
+2. **Meta Layer** (System Execution)
+   - **What:** Running iteration loops, spawning sub-agents
+   - **Tools:** `TokenTracker` with learned history (min 3 samples)
+   - **Cost:** Medium (5,000-15,000 per iteration)
+   - **Learning:** Records actual usage, improves estimates over time
+
+3. **Project Layer** (Target Operations)
+   - **What:** Blender renders, file I/O
+   - **Cost:** Low (~500 tokens per render)
+   - **No tracking needed:** Too cheap to matter
+
+### Token Guard Integration
+- `TokenGuard`: Simple warnings for meta layer operations
+- `OperationCostEstimator`: Composite estimates for meta-meta layer
+- **Proactive checking:** Via `token-check` skill (global .claude/skills/)
+- **Non-blocking:** Shows warning, user decides
+
 ### Why 2-3 Iterations?
 - Each iteration should be **thoughtful, not brute force**
 - With vision API, each eval costs tokens
+- Token tracking now accounts for all layers
 - Human review every 3 iterations is manageable
 - Can scale up once proven effective
 
@@ -243,6 +280,7 @@ TEST: System enhances itself when encountering new problems
 2. Only send changed scene elements to vision (not full image)
 3. Use Haiku for simple decisions, Sonnet for complex
 4. Batch multiple evaluations in one API call (if possible)
+5. **Meta-meta awareness:** Warn before expensive framework operations
 
 ## Next Session Tasks
 
