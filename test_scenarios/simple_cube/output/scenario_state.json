@@ -1,0 +1,22 @@
+{
+  "conversation_id": "20260120_210212",
+  "created_at": "2026-01-20T21:02:12.262058",
+  "last_updated": "2026-01-20T21:02:13.609837",
+  "current_file": "G:\\projects\\um-auto_dev\\test_scenarios\\simple_cube\\output\\red_cube_scene.blend",
+  "current_branch": "scenario-simple-cube-20260120_210212",
+  "execution_history": [
+    {
+      "timestamp": "2026-01-20T21:02:13.609837",
+      "command": "execute_scenario:Simple Cube Scene",
+      "result": {
+        "success": true,
+        "returncode": 0,
+        "stdout": "00:01.062  reports          | WARNING Path 'C:\\Program Files\\Blender Foundation\\Blender 5.0\\5.0\\datafiles\\assets\\brushes\\essentials_brushes-gp_draw.blend' cannot be made relative for Material 'Dots Stroke'\nBlender 5.0.0 (hash a37564c4df7a built 2025-11-18 11:06:54)\n00:01.062  reports          | WARNING Path 'C:\\Program Files\\Blender Foundation\\Blender 5.0\\5.0\\datafiles\\assets\\brushes\\essentials_brushes-gp_draw.blend' cannot be made relative for Material 'Material'\nregister_class(...):\nWarning: 'PHYRON_NP_CustomTab' does not contain '_PT_' with prefix and suffix\nAdd-on not loaded: \"mesh_looptools\", cause: No module named 'mesh_looptools'\nregister\nCube 'RedCube' created successfully\nMaterial 'RedMaterial' assigned to 'RedCube'\nCamera 'MainCamera' configured\nLight 'SunLight' created\nRender settings configured\nInfo: Saved as \"red_cube_scene.blend\"\nFile saved to: G:\\projects\\um-auto_dev\\test_scenarios\\simple_cube\\output\\red_cube_scene.blend\n=== Scene Information ===\nScene name: Scene\nObjects in scene: 5\n\nObjects:\n  - MainCamera (CAMERA)\n  - SunLight (LIGHT)\n  - Light (LIGHT)\n  - Camera (CAMERA)\n  - RedCube (MESH)\n========================================\nunregister\n\nBlender quit\n",
+        "stderr": "Traceback (most recent call last):\n  File \"C:\\Program Files\\Blender Foundation\\Blender 5.0\\5.0\\scripts\\modules\\addon_utils.py\", line 432, in enable\n    mod = importlib.import_module(module_name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Blender Foundation\\Blender 5.0\\5.0\\python\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1147, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 690, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 940, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"C:\\Users\\Luke\\AppData\\Roaming\\Blender Foundation\\Blender\\5.0\\scripts\\addons\\MACHIN3tools\\__init__.py\", line 68, in <module>\n    from . properties import M3SceneProperties, M3ObjectProperties\n  File \"C:\\Users\\Luke\\AppData\\Roaming\\Blender Foundation\\Blender\\5.0\\scripts\\addons\\MACHIN3tools\\properties.py\", line 9, in <module>\n    from . utils.draw import remove_object_axes_drawing_handler, add_object_axes_drawing_handler\n  File \"C:\\Users\\Luke\\AppData\\Roaming\\Blender Foundation\\Blender\\5.0\\scripts\\addons\\MACHIN3tools\\utils\\draw.py\", line 5, in <module>\n    import bgl\nModuleNotFoundError: No module named 'bgl'\nG:\\projects\\um-auto_dev\\test_scenarios\\simple_cube\\output\\generated_scene.py:32: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0\n  mat.use_nodes = True\n",
+        "command": "C:\\Program Files\\Blender Foundation\\Blender 5.0\\blender.exe --background --python G:\\projects\\um-auto_dev\\test_scenarios\\simple_cube\\output\\generated_scene.py --python-exit-code 1"
+      }
+    }
+  ],
+  "context": {},
+  "pending_actions": []
+}
