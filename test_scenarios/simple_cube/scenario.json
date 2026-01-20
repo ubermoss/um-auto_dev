@@ -1,0 +1,72 @@
+{
+  "name": "Simple Cube Scene",
+  "description": "Create a basic scene with a red cube, camera, and lighting",
+  "steps": [
+    {
+      "id": 1,
+      "type": "create_object",
+      "description": "Create a red cube at origin",
+      "object_type": "cube",
+      "parameters": {
+        "location": [0, 0, 0],
+        "scale": [2, 2, 2],
+        "name": "RedCube"
+      }
+    },
+    {
+      "id": 2,
+      "type": "apply_material",
+      "description": "Apply red material to cube",
+      "target_object": "RedCube",
+      "parameters": {
+        "color": [0.8, 0.1, 0.1, 1.0],
+        "material_name": "RedMaterial"
+      }
+    },
+    {
+      "id": 3,
+      "type": "setup_camera",
+      "description": "Position camera to view the cube",
+      "parameters": {
+        "location": [7, -7, 5],
+        "rotation": [1.1, 0, 0.785],
+        "name": "MainCamera"
+      }
+    },
+    {
+      "id": 4,
+      "type": "setup_light",
+      "description": "Add sun light to the scene",
+      "parameters": {
+        "light_type": "SUN",
+        "location": [5, 5, 10],
+        "energy": 2.0,
+        "name": "SunLight"
+      }
+    },
+    {
+      "id": 5,
+      "type": "configure_render",
+      "description": "Set render settings",
+      "parameters": {
+        "engine": "CYCLES",
+        "samples": 128,
+        "resolution_x": 1920,
+        "resolution_y": 1080
+      }
+    },
+    {
+      "id": 6,
+      "type": "save_file",
+      "description": "Save the blend file",
+      "parameters": {
+        "output_path": "test_scenarios/simple_cube/output/red_cube_scene.blend"
+      }
+    }
+  ],
+  "expected_output": {
+    "blend_file": "test_scenarios/simple_cube/output/red_cube_scene.blend",
+    "objects": ["RedCube", "MainCamera", "SunLight"],
+    "render_ready": true
+  }
+}

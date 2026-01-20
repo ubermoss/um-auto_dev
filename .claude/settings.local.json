@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where:*)",
+      "Bash(node:*)",
+      "Bash(git --version)",
+      "Bash(dir:*)",
+      "Bash(if exist \"C:\\\\Program Files\\\\Blender Foundation\" dir \"C:\\\\Program Files\\\\Blender Foundation\")",
+      "Bash(python:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(test -f:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
