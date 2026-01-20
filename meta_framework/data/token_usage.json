@@ -1,0 +1,30 @@
+{
+  "spawn_agent": [
+    {
+      "cost": 3500,
+      "timestamp": "2026-01-20T22:12:58.983167",
+      "tokens_before": 100000,
+      "tokens_after": 103500
+    },
+    {
+      "cost": 3200,
+      "timestamp": "2026-01-20T22:12:58.984167",
+      "tokens_before": 105000,
+      "tokens_after": 108200
+    },
+    {
+      "cost": 3700,
+      "timestamp": "2026-01-20T22:13:14.969129",
+      "tokens_before": 115000,
+      "tokens_after": 118700
+    }
+  ],
+  "render": [
+    {
+      "cost": 800,
+      "timestamp": "2026-01-20T22:12:58.984167",
+      "tokens_before": 110000,
+      "tokens_after": 110800
+    }
+  ]
+}

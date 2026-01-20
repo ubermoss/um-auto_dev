@@ -1,0 +1,31 @@
+{
+  "last_scanned": "2026-01-20T22:08:04.554238",
+  "categories": {
+    "tools": {
+      "blender": [
+        "blender_tools"
+      ],
+      "executor": [
+        "executor"
+      ],
+      "git": [
+        "git_tools"
+      ],
+      "state": [
+        "state_manager"
+      ]
+    },
+    "vision": {
+      "histogram_analyzer": {
+        "description": "Analyzes render exposure via histogram",
+        "operations": [
+          "analyze_exposure",
+          "suggest_lighting"
+        ],
+        "added_at": "2026-01-20T22:08:04.554238",
+        "used_count": 0,
+        "success_rate": 1.0
+      }
+    }
+  }
+}
