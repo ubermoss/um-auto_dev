@@ -9,7 +9,12 @@
       "Bash(python:*)",
       "Bash(git rev-parse:*)",
       "Bash(test -f:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(gh auth status:*)",
+      "Bash(gh repo create:*)",
+      "Bash(git push:*)",
+      "Bash(git rm:*)"
     ]
   }
 }

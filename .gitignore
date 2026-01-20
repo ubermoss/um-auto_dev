@@ -42,7 +42,8 @@ desktop.ini
 *.log
 logs/*.log
 
-# Blender
+# Blender files (large binaries, exclude from git)
+*.blend
 *.blend1
 *.blend2
 *.blend3
